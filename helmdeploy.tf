@@ -1,8 +1,13 @@
+
+provider "kubernetes" {
+  host = ""https://api.k8s-clusters.kubernetes.clearcorrect.io"
+  config_path = "/root/.kube/config 
+
+}
 provider "helm" {
     service_account = "tiller"
     namespace = "kube-system"
     kubernetes {
-        insecure = "true"
         host = "https://api.k8s-clusters.kubernetes.clearcorrect.io"       
         config_path = "/root/.kube/config"
        
