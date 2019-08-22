@@ -2,7 +2,7 @@ provider "helm" {
     kubernetes {
         host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
         config_path = "/root/.kube/config"
-        insecure = "true"
+       
 
     }
     }
