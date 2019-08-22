@@ -6,7 +6,7 @@ provider "helm" {
 
         
     }
-}
+
 
 resource "helm_release" "mydatabase" {
     name      = "mydatabase"
@@ -21,4 +21,5 @@ resource "helm_release" "mydatabase" {
         name = "mariadbPassword"
         value = "qux"
     }
+}
 }
