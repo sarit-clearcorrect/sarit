@@ -5,6 +5,7 @@ provider "helm" {
         password = "9z4bLh5wDmEasrbxFpNWaZdUFQwFQJWE"
 
     }
+    }
 
 
 
