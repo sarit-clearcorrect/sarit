@@ -1,8 +1,7 @@
 provider "helm" {
     kubernetes {
         host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
-        username = "admin"
-        password = "9z4bLh5wDmEasrbxFpNWaZdUFQwFQJWE"
+        config_path = "/root/.kube/config"
 
     }
     }
