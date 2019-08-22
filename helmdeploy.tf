@@ -1,6 +1,8 @@
 provider "helm" {
+    service_account = "tiller"
+    namespace = "kube-system"
     kubernetes {
-        host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
+        host = ""https://kubernetes.default"        
         config_path = "/root/.kube/config"
        
 
