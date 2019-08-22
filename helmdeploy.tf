@@ -3,7 +3,7 @@ provider "helm" {
         host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
         username = "admin"
         password = "9z4bLh5wDmEasrbxFpNWaZdUFQwFQJWE"
-        load_config_file = "/home/jenkins/workspace/test/config"
+        load_config_file = "config"
         
     }
 
