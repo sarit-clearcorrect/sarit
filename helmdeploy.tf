@@ -1,11 +1,24 @@
 provider "helm" {
     kubernetes {
-        host     = "https://104.196.242.174"
-        username = "ClusterMaster"
-        password = "MindTheGap"
+        host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
+        username = "admin"
+        password = "9z4bLh5wDmEasrbxFpNWaZdUFQwFQJWE"
 
-        client_certificate     = "${file("~/.kube/client-cert.pem")}"
-        client_key             = "${file("~/.kube/client-key.pem")}"
-        cluster_ca_certificate = "${file("~/.kube/cluster-ca-cert.pem")}"
+        
+    }
+}
+
+resource "helm_release" "mydatabase" {
+    name      = "mydatabase"
+    chart     = "stable/mariadb"
+
+    set {
+        name  = "mariadbUser"
+        value = "foo"
+    }
+
+    set {
+        name = "mariadbPassword"
+        value = "qux"
     }
 }
