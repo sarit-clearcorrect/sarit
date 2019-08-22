@@ -7,7 +7,7 @@ provider "helm" {
         
     }
 
-
+}
 resource "helm_release" "mydatabase" {
     name      = "mydatabase"
     chart     = "stable/mariadb"
@@ -22,4 +22,4 @@ resource "helm_release" "mydatabase" {
         value = "qux"
     }
 }
-}
+
