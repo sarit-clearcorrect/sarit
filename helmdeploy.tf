@@ -2,7 +2,7 @@ provider "helm" {
     kubernetes {
         host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
         config_path = "/root/.kube/config"
-        
+        enable_tls = "true"
 
     }
     }
@@ -13,7 +13,7 @@ provider "helm" {
 resource "helm_release" "mydatabase" {
     name      = "mydatabase"
     chart     = "stable/mariadb"
-    enable_tls = "true"
+    
 
     set {
         name  = "mariadbUser"
