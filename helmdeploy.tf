@@ -1,13 +1,4 @@
-provider "helm" {
-    kubernetes {
-        host     = "https://api.k8s-clusters.kubernetes.clearcorrect.io"
-        username = "admin"
-        password = "9z4bLh5wDmEasrbxFpNWaZdUFQwFQJWE"
-        load_config_file = "config"
-        
-    }
 
-}
 resource "helm_release" "mydatabase" {
     name      = "mydatabase"
     chart     = "stable/mariadb"
